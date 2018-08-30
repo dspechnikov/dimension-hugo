@@ -1,3 +1,3 @@
-# dimension-hugo
+# Dimension for Hugo
 
-The Dimension theme from HTML5 UP adapted for Hugo static site generator.
+The [Dimension](https://html5up.net/dimension/) theme from [HTML5 UP](https://html5up.net/) adapted for [Hugo](https://gohugo.io/) static site generator.
