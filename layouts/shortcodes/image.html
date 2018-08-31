@@ -1,0 +1,7 @@
+<span class="image {{ .Get "position" | default "main" }}">
+    <img
+            src="{{ .Get "src" }}"
+            {{ with .Get "alt" }}alt="{{.}}"{{ end }}
+            {{ with .Get "title" }}title="{{.}}"{{ end }}
+    />
+</span>

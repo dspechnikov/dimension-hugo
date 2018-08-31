@@ -1,0 +1,22 @@
+<form method="post" action="{{ .Get "action" }}">
+    {{ with .Get "formspreeRedirectURL" }}
+    <input type="hidden" name="_next" value="{{.}}" />
+    {{ end }}
+    {{ with .Get "formspreeSubject" }}
+    <input type="hidden" name="_subject" value="{{.}}" />
+    {{ end }}
+    {{ with .Get "formspreeHoneypot" }}
+    <input type="text" name="_gotcha" style="display:none" />
+    {{ end }}
+    <div class="fields">
+        {{ .Inner }}
+    </div>
+    <ul class="actions">
+        {{ with .Get "submitButtonText" }}
+        <li><input type="submit" value="{{.}}" class="primary" /></li>
+        {{ end }}
+        {{ with .Get "resetButtonText" }}
+        <li><input type="reset" value="{{.}}" /></li>
+        {{ end }}
+    </ul>
+</form>

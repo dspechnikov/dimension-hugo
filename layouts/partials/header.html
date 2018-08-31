@@ -1,0 +1,20 @@
+<header id="header">
+    {{ with .Site.Params.Logo }}
+    <div class="logo">
+        <span class="icon fa-{{.}}"></span>
+    </div>
+    {{ end }}
+    <div class="content">
+        <div class="inner">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Content | markdownify }}</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            {{ range .Pages }}
+            <li><a href="#{{ lower .Title }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</header>

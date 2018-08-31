@@ -1,0 +1,12 @@
+name = "Dimension"
+license = "MIT"
+licenselink = "https://gitlab.com/dspechnikov/dimension-hugo/blob/master/LICENSE"
+description = "The Dimension template from HTML5 UP adapted for Hugo static site generator."
+homepage = "https://example.com/"
+tags = []
+features = []
+min_version = "0.46"
+
+[author]
+  name = "Dmitry Pechnikov"
+  homepage = "https://dmitrypechnikov.xyz"

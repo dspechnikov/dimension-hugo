@@ -1,0 +1,9 @@
+<div class="field {{ with .Get "width" }}{{.}}{{ end }}">
+    {{ $fieldName := or (.Get "name") (.Get "id") }}
+    <label for="{{ $fieldName }}">{{ or (.Get "label") (.Get "id" | title) }}</label>
+    {{ if .Get "type" | eq "textarea" }}
+    <textarea name="{{ $fieldName }}" id="{{ .Get "id" }}" rows="{{ .Get "rows" | default "5" }}"></textarea>
+    {{ else }}
+    <input type="{{ .Get "type" }}" name="{{ $fieldName }}" id="{{ .Get "id" }}" />
+    {{ end }}
+</div>

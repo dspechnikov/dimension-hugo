@@ -1,0 +1,43 @@
+{{ with .Site.Params.titleFontSize }}
+#header h1 {
+    font-size: {{.}};
+}
+{{ end }}
+
+{{ with .Site.Params.subtitleFontSize }}
+#header .content p {
+    font-size: {{.}};
+}
+{{ end }}
+
+{{ with .Site.Params.fontSize }}
+body {
+    font-size: {{.}};
+}
+{{ end }}
+
+{{ with .Site.Params.overlayOpacityPercentage }}
+#bg:before {
+    {{ $opacity := div (int .) 100.0 }}
+    background-image: linear-gradient(to top,rgba(19,21,25,{{$opacity}}),rgba(19,21,25,{{$opacity}})),
+                      url("../../images/overlay.png");
+}
+{{ end }}
+
+{{ if (.Site.Params.disableImageOverlay | default false) }}
+.image:before {
+    content: none;
+}
+{{ end }}
+
+{{ if not (.Site.Params.logo | default "") }}
+#header .content {
+    border-top-width: 0px;
+}
+{{ end }}
+
+{{ with .Site.Params.articleWidth }}
+#main article {
+    width: {{.}};
+}
+{{ end }}

@@ -1,0 +1,9 @@
+{{ range (slice "jquery" "browser" "breakpoints") }}
+    {{ $resource := resources.Get (printf "js/%s.min.js" .) | fingerprint }}
+    <script src="{{ $resource.Permalink }}" integrity="{{ $resource.Data.Integrity }}"></script>
+{{ end }}
+
+{{ range (slice "main" "util") }}
+    {{ $resource := resources.Get (printf "js/%s.js" .) | minify | fingerprint }}
+    <script src="{{ $resource.Permalink }}" integrity="{{ $resource.Data.Integrity }}"></script>
+{{ end }}

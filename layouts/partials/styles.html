@@ -1,0 +1,13 @@
+{{ $mainCSS := resources.Get "sass/main.scss" | toCSS (dict "targetPath" "css/main.css") | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $mainCSS.Permalink }}" integrity="{{ $mainCSS.Data.Integrity }}">
+
+{{ $noscriptCSS := resources.Get "sass/noscript.scss" | toCSS (dict "targetPath" "css/noscript.css") | minify | fingerprint }}
+<noscript><link rel="stylesheet" href="{{ $noscriptCSS.Permalink }}" integrity="{{ $noscriptCSS.Data.Integrity }}" /></noscript>
+
+{{ $themeCSS := resources.Get "css/theme.css" | resources.ExecuteAsTemplate "theme.css" . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $themeCSS.Permalink }}" integrity="{{ $themeCSS.Data.Integrity }}">
+
+{{- if .Site.Params.customCSS | default "" -}}
+    {{ $customCSS := resources.Get (printf "css/%s" .Site.Params.customCSS) | resources.ExecuteAsTemplate .Site.Params.customCSS . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $customCSS.Permalink }}" integrity="{{ $customCSS.Data.Integrity }}">
+{{ end }}

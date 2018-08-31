@@ -1,0 +1,11 @@
+{{ define "main" }}
+<!-- Sections -->
+<div id="main">
+    {{ range .Pages }}
+    <article id="{{ lower .Title }}">
+        <h2 class="major">{{ .Title }}</h2>
+        {{ .Content }}
+    </article>
+    {{ end }}
+</div>
+{{ end }}
