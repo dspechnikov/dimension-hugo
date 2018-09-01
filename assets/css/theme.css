@@ -20,7 +20,7 @@ body {
 #bg:before {
     {{ $opacity := div (int .) 100.0 }}
     background-image: linear-gradient(to top,rgba(19,21,25,{{$opacity}}),rgba(19,21,25,{{$opacity}})),
-                      url("../../images/overlay.png");
+                      url("{{ $.Site.BaseURL }}/images/overlay.png");
 }
 {{ end }}
 

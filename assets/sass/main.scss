@@ -1,3 +1,5 @@
+$site_base_url: '{{ .Site.BaseURL }}';
+
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';

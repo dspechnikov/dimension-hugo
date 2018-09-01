@@ -1,0 +1,22 @@
+image:
+  name: klakegg/hugo:ext
+  entrypoint: [""]
+
+pages:
+  script:
+    - mkdir -p exampleSite/themes/
+    - cd exampleSite/themes
+    - ln -s ../../ dimension
+
+    - cd ../
+    - sed -i'' -e 's/baseURL.*/baseURL = "https:\/\/dspechnikov.gitlab.io\/dimension-hugo\/"/' config.toml
+    - hugo
+    - gzip -k -r public
+    - cp -r public ../public
+
+  artifacts:
+    paths:
+      - public
+
+  only:
+    - master
