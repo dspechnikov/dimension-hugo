@@ -10,7 +10,7 @@
 }
 {{ end }}
 
-{{ with .Site.Params.fontSize }}
+{{ with .Site.Params.baseFontSize }}
 body {
     font-size: {{.}};
 }
