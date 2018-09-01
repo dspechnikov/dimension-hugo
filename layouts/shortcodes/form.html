@@ -12,7 +12,7 @@
         {{ .Inner }}
     </div>
     <ul class="actions">
-        {{ with .Get "submitButtonText" }}
+        {{ with .Get "submitButtonText" | default "Send Message" }}
         <li><input type="submit" value="{{.}}" class="primary" /></li>
         {{ end }}
         {{ with .Get "resetButtonText" }}
