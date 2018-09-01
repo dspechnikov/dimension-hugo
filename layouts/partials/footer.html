@@ -1,6 +1,6 @@
 <footer id="footer">
     <p class="copyright">
-        {{ with .Site.Params.Copyright }}&copy; {{.}}.{{ end }}
+        {{ with .Site.Params.Copyright }}&copy; {{ . | safeHTML }}.{{ end }}
         Design: <a href="https://html5up.net">HTML5 UP</a>.
     </p>
 </footer>
