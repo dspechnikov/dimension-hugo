@@ -1,7 +1,7 @@
 <header id="header">
-    {{ with .Site.Params.Logo }}
+    {{ if not (.Site.Params.disableLogo | default false) }}
     <div class="logo">
-        <span class="icon fa-{{.}}"></span>
+        <span class="icon fa-{{ .Site.Params.logo | default "diamond" }}"></span>
     </div>
     {{ end }}
     <div class="content">

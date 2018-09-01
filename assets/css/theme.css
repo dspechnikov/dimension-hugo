@@ -30,13 +30,13 @@ body {
 }
 {{ end }}
 
-{{ if not (.Site.Params.logo | default "") }}
+{{ if (.Site.Params.disableLogo | default false) }}
 #header .content {
     border-top-width: 0px;
 }
 {{ end }}
 
-{{ with .Site.Params.articleWidth }}
+{{ with .Site.Params.modalWidth }}
 #main article {
     width: {{.}};
 }
