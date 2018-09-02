@@ -34,7 +34,7 @@ git clone https://gitlab.com/dspechnikov/dimension-hugo themes/dimension
 
 ### Configuration
 
-The theme can be configured via `config.toml` file. See demo site [configuration](https://gitlab.com/dspechnikov/dimension-hugo/exampleSite/config.toml) for examples.
+The theme can be configured via `config.toml` file. See demo site [configuration](https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/config.toml) for examples.
 
 #### Supported options
 
@@ -63,7 +63,7 @@ The theme has dummy background image by default. To replace it with yours, copy 
 1. Change page title text with `title` front matter variable.
 1. Change page subtitle text with page content.
 
-See demo site [index page](https://gitlab.com/dspechnikov/dimension-hugo/exampleSite/content/_index.md) for examples.
+See demo site [index page](https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/content/_index.md) for examples.
 
 #### Regular pages
 
