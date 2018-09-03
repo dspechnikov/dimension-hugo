@@ -1,5 +1,6 @@
 +++
-title = "Docs"
+title = "Documentation"
+menuTitle = "Docs"
 weight = 2
 +++
 

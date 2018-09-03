@@ -13,7 +13,12 @@
     <nav>
         <ul>
             {{ range .Pages }}
-            <li><a href="#{{ lower .Title }}">{{ .Title }}</a></li>
+            <li><a
+                    href="{{- or .Params.menuLink (printf "#%s" (lower .Title)) -}}"
+                >
+                {{- or .Params.menuTitle .Title -}}
+                </a>
+            </li>
             {{ end }}
         </ul>
     </nav>
