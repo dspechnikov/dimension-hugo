@@ -1,4 +1,6 @@
 <head>
+    {{ template "_internal/google_analytics_async.html" . }}
+
     <title>{{ .Site.Title }}</title>
 
     {{ with .Site.Params.Description }}

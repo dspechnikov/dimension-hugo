@@ -2,6 +2,7 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Dimension for Hugo"
 theme = "dimension"
+# googleAnalytics = "UA-123-45"
 
 [params]
     author = "Dmitry Pechnikov"

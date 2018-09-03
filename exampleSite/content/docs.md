@@ -37,7 +37,11 @@ git clone https://gitlab.com/dspechnikov/dimension-hugo themes/dimension
 
 The theme can be configured via `config.toml` file. See demo site [configuration](https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/config.toml) for examples.
 
-#### Supported options
+#### Google Analytics
+
+To use [Google Analytics](https://analytics.google.com/), add your tracking ID via `googleAnalytics` option in `config.toml`.
+
+#### Supported site parameters
 
 - `author` (default: `""`) - Site author used in meta author tag.
 - `description` (default: `""`) - Site description used in meta description tag.
