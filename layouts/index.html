@@ -1,8 +1,8 @@
 {{ define "main" }}
 <!-- Sections -->
 <div id="main">
-    {{ range .Pages }}
-    <article id="{{ lower .Title }}">
+    {{ range (.Pages | lang.Merge .Sites.First.RegularPages) }}
+    <article id="{{ .File.TranslationBaseName }}">
         <h2 class="major">{{ .Title }}</h2>
         {{ .Content }}
     </article>

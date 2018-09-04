@@ -35,7 +35,7 @@ git clone https://gitlab.com/dspechnikov/dimension-hugo themes/dimension
 
 ### Configuration
 
-The theme can be configured via `config.toml` file. See demo site [configuration](https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/config.toml) for examples.
+The theme can be configured via `config.toml` file. See demo site [configuration][demo site configuration] for examples.
 
 #### Google Analytics
 
@@ -170,3 +170,17 @@ If you need to change something else, you can do it in your own CSS file. To add
 
 1. Create `assets/css/yourCustomCSSName.css` file.
 1. Add `customCSS = "yourCustomCSSName.css"` to params section of `config.toml` file.  
+
+### Translations
+
+To translate site content to multiple languages:
+
+1. Add languages configuration (see demo site [configuration][demo site configuration] for example).
+1. Add `<page-name>.<language-code>.md` file for each page you want to translate. 
+   I.e, `_index.fr.md` for French translation of the main page.
+   
+After that, "switch language" links will be shown in the site footer.
+
+Content without translations will be displayed in default language.
+
+[demo site configuration]: https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/config.toml

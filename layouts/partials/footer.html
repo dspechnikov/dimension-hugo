@@ -2,5 +2,21 @@
     <p class="copyright">
         {{ with .Site.Params.Copyright }}&copy; {{ . | safeHTML }}.{{ end }}
         Design: <a href="https://html5up.net">HTML5 UP</a>.
+
+        {{ if .Site.IsMultiLingual }}
+            Languages:
+            {{ $defaultLanguage := (index (sort .Site.Languages "Weight") 0).Lang }}
+            {{ .Scratch.Set "count" 0 }}
+            {{ range $translation := .AllTranslations }}
+                {{ if not (eq $translation.Language $.Language) }}
+                {{ $.Scratch.Add "count" 1}}
+                <a href="{{ .Permalink }}">{{ $translation.Language.LanguageName }}</a>
+                    {{ if lt ($.Scratch.Get "count") (sub (len .AllTranslations) 1) }}
+                        |
+                    {{ end }}
+                {{ end }}
+            {{- end -}}
+        {{ end }}
+
     </p>
 </footer>

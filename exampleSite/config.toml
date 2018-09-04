@@ -1,5 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
+DefaultContentLanguage = "en"
 title = "Dimension for Hugo"
 theme = "dimension"
 # googleAnalytics = "UA-123-45"
@@ -19,3 +20,17 @@ theme = "dimension"
     # modalWidth = "40rem"
 
     # customCSS = "custom.css"
+
+
+[languages]
+    [languages.en]
+        languageName = "English"
+        weight = 1
+
+    [languages.ru]
+        languageName = "Russian"
+        weight = 2
+        title = "Dimension"
+        [languages.ru.params]
+            author = "Дмитрий Печников"
+            description = "Тема для генератора сайтов Hugo. Создана на основе HTML шаблона Dimension от HTML5 UP."

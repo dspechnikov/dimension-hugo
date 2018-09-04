@@ -6,15 +6,25 @@
     {{ end }}
     <div class="content">
         <div class="inner">
+            {{ if .Site.IsMultiLingual }}
+                {{ $defaultLanguage := (index (sort .Site.Languages "Weight") 0).Lang }}
+                {{ .Scratch.Set "currentTranslation" (index (where .AllTranslations "Lang" .Lang) 0) }}
+                {{ if eq (.Scratch.Get "currentTranslation").File.TranslationBaseName "" }}
+                    {{ .Scratch.Set "currentTranslation" (index (where .AllTranslations "Lang" $defaultLanguage) 0) }}
+                {{ end }}
+            {{ end }}
+
+            {{- with or (.Scratch.Get "currentTranslation") . -}}
             <h1>{{ .Title }}</h1>
             <p>{{ .Content | markdownify }}</p>
+            {{ end }}
         </div>
     </div>
     <nav>
         <ul>
-            {{ range .Pages }}
+            {{ range (.Pages | lang.Merge .Sites.First.RegularPages) }}
             <li><a
-                    href="{{- or .Params.menuLink (printf "#%s" (lower .Title)) -}}"
+                    href="{{- or .Params.menuLink (printf "#%s" ( .File.TranslationBaseName )) -}}"
                 >
                 {{- or .Params.menuTitle .Title -}}
                 </a>
