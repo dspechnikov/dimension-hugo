@@ -47,7 +47,7 @@ To use [Google Analytics](https://analytics.google.com/), add your tracking ID v
 - `description` (default: `""`) - Site description used in meta description tag.
 - `copyright` (default: `""`) - The text after copyright sign in the footer.
 - `disableLogo` (default: `false`) - Set to true to remove logo image and all borders above the title.
-- `logo` (default: `diamond`) - Font awesome icon name to use as a logo.
+- `logo` (default: `gem`) - Font awesome icon name to use as a logo.
 - `titleFontSize` (default: `2.25rem`) - Font size of the title in the main page.
 - `subtitleFontSize` (default: `0.8rem`) - Font size of the subtitle in the main page.
 - `baseFontSize` (default: `1.0rem`) - Base font size used in article text.

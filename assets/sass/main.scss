@@ -5,7 +5,7 @@ $site_base_url: '{{ .Site.BaseURL }}';
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
-@import 'font-awesome.min.css';
+@import 'all.min.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600');
 
 /*
