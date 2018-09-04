@@ -24,7 +24,7 @@
         <ul>
             {{ range (.Pages | lang.Merge .Sites.First.RegularPages) }}
             <li><a
-                    href="{{- or .Params.menuLink (printf "#%s" ( .File.TranslationBaseName )) -}}"
+                    {{ printf "href=\"%s\"" (or (.Params.menuLink) (printf "#%s" ( .File.TranslationBaseName ))) | safeHTMLAttr }}
                 >
                 {{- or .Params.menuTitle .Title -}}
                 </a>
