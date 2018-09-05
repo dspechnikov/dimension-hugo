@@ -64,7 +64,7 @@ To use [Google Analytics](https://analytics.google.com/), add your tracking ID v
 
 The theme has dummy background image by default. To replace it with yours, copy it to `static/images/bg.jpg` file.
 
-### Logo
+#### Logo
 
 You can use custom logo image (a square one, preferably) instead of Font Awesome icon. To do this:
 1. Place the image to `static/images/` directory.
