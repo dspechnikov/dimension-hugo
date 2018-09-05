@@ -2,7 +2,7 @@
     {{ if not (.Site.Params.disableLogo | default false) }}
     <div class="logo">
         {{ if .Site.Params.logoImage | default "" }}
-            <img src="images/{{ .Site.Params.logoImage }}" width="100%">
+            <img src="{{ (printf "images/%s" .Site.Params.logoImage) | absURL }}" width="100%">
         {{ else }}
             <span class="icon fa-{{ .Site.Params.logoIcon | default "gem" }}"></span>
         {{ end }}
