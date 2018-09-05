@@ -1,6 +1,15 @@
 <footer id="footer">
     <p class="copyright">
-        {{ with .Site.Params.Copyright }}&copy; {{ . | safeHTML }}.{{ end }}
+        {{ if .Site.Params.copyrightText | default "" }}
+        &copy;
+            {{ $currentYear := now.Format "2006" }}
+            {{ .Site.Params.copyrightPublishYear }}
+            {{- if not (eq .Site.Params.copyrightPublishYear $currentYear) -}}
+                -{{ $currentYear }}
+            {{ end }}
+
+        {{ .Site.Params.copyrightText | safeHTML }}.
+        {{ end }}
         Design: <a href="https://html5up.net">HTML5 UP</a>.
 
         {{ if .Site.IsMultiLingual }}

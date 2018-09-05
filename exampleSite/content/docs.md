@@ -45,7 +45,8 @@ To use [Google Analytics](https://analytics.google.com/), add your tracking ID v
 
 - `author` (default: `""`) - Site author used in meta author tag.
 - `description` (default: `""`) - Site description used in meta description tag.
-- `copyright` (default: `""`) - The text after copyright sign in the footer.
+- `copyrightText` (default: `""`) - The text after copyright sign and years in the footer.
+- `copyrightPublishYear` (default: `""`) - The year when site was published for the first time. See [this section](#automatic-copyright-year) for details.
 - `disableLogo` (default: `false`) - Set to true to remove logo image and all borders above the title.
 - `logo` (default: `gem`) - Font awesome icon name to use as a logo.
 - `titleFontSize` (default: `2.25rem`) - Font size of the title in the main page.
@@ -182,5 +183,11 @@ To translate site content to multiple languages:
 After that, "switch language" links will be shown in the site footer.
 
 Content without translations will be displayed in default language.
+
+### Automatic copyright year
+
+Copyright message should include at least the year when the site was published 
+for the first time. You can specify it in `copyrightPublishYear` option. Then 
+copyright years will be updated with each passing year to look like this: `<copyrightPublishYear>-<currentYear>`.   
 
 [demo site configuration]: https://gitlab.com/dspechnikov/dimension-hugo/blob/master/exampleSite/config.toml

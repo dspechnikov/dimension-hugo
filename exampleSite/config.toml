@@ -8,7 +8,8 @@ theme = "dimension"
 [params]
     author = "Dmitry Pechnikov"
     description = "The Dimension template from HTML5 UP adapted for Hugo static site generator."
-    copyright = "<a href=\"https://dmitrypechnikov.xyz\">Dmitry Pechnikov</a>"
+    copyrightPublishYear = "2018"
+    copyrightText = "<a href=\"https://dmitrypechnikov.xyz\">Dmitry Pechnikov</a>"
 
     # disableLogo = false
     # logo = "gem"
