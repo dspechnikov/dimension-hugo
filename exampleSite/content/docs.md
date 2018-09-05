@@ -48,7 +48,8 @@ To use [Google Analytics](https://analytics.google.com/), add your tracking ID v
 - `copyrightText` (default: `""`) - The text after copyright sign and years in the footer.
 - `copyrightPublishYear` (default: `""`) - The year when site was published for the first time. See [this section](#automatic-copyright-year) for details.
 - `disableLogo` (default: `false`) - Set to true to remove logo image and all borders above the title.
-- `logo` (default: `gem`) - Font awesome icon name to use as a logo.
+- `logoImage` (default: `""`) - Image to use as a logo. If set, `logoIcon` is ignored.
+- `logoIcon` (default: `gem`) - Font awesome icon name to use as a logo.
 - `titleFontSize` (default: `2.25rem`) - Font size of the title in the main page.
 - `subtitleFontSize` (default: `0.8rem`) - Font size of the subtitle in the main page.
 - `baseFontSize` (default: `1.0rem`) - Base font size used in article text.
@@ -57,9 +58,17 @@ To use [Google Analytics](https://analytics.google.com/), add your tracking ID v
 - `modalWidth` (default: `40rem`) - Width of modal window with article content.
 - `customCSS` (default: `""`) - Custom CSS file name.
 
-### Custom background image
+### Custom images
+
+#### Background
 
 The theme has dummy background image by default. To replace it with yours, copy it to `static/images/bg.jpg` file.
+
+### Logo
+
+You can use custom logo image (a square one, preferably) instead of Font Awesome icon. To do this:
+1. Place the image to `static/images/` directory.
+1. Write image file name in `logoImage` option, i.e. `logo.jpg`.
 
 ### Pages content
 

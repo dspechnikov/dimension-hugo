@@ -1,7 +1,11 @@
 <header id="header">
     {{ if not (.Site.Params.disableLogo | default false) }}
     <div class="logo">
-        <span class="icon fa-{{ .Site.Params.logo | default "gem" }}"></span>
+        {{ if .Site.Params.logoImage | default "" }}
+            <img src="images/{{ .Site.Params.logoImage }}" width="100%">
+        {{ else }}
+            <span class="icon fa-{{ .Site.Params.logoIcon | default "gem" }}"></span>
+        {{ end }}
     </div>
     {{ end }}
     <div class="content">
