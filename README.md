@@ -50,4 +50,4 @@ This theme is licensed under MIT License. Check the [LICENSE](./LICENSE) file fo
 
 This project is based on [Dimension](https://html5up.net/dimension/) template made by [ajlkn](https://aj.lkn.io). The template itself is released under [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/).
 
-[docs]: https://dspechnikov.gitlab.io/dimension-hugo/#docs
+[docs]: ./documentation.md
