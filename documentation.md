@@ -98,11 +98,11 @@ An HTML form with support for [Formspree](https://formspree.io) custom attribute
 
 ##### Basic usage
 ```
-{{</* form action="actionURL" */>}}
-    {{</* formField type="text" id="name" width="half" */>}}
-    {{</* formField type="email" id="email" */>}}
-    {{</* formField type="textarea" id="message"*/>}}
-{{</* /form */>}}
+{{< form action="actionURL" >}}
+    {{< formField type="text" id="name" width="half" >}}
+    {{< formField type="email" id="email" >}}
+    {{< formField type="textarea" id="message">}}
+{{< /form >}}
 ```
 
 ##### Supported options
@@ -120,7 +120,7 @@ The following options are specific for form using [Formspree](https://formspree.
 A form field to use within [Form](#form) shortcode.
 
 ##### Basic usage
-`{{</* formField type="text" id="name" */>}}`
+`{{< formField type="text" id="name" >}}`
 
 ##### Supported options
 - `type` - **required**. The field type. 
@@ -142,10 +142,10 @@ A set of [Font Awesome](https://fontawesome.com/) icons.
 
 ##### Basic usage
 ```
-{{</* icons */>}}
-    {{</* icon name="gitlab" link="#" title="GitLab" */>}}
-    {{</* icon name="envelope-o" link="mailto:me@example.com" title="Email" */>}}
-{{</* /icons */>}}
+{{< icons >}}
+    {{< icon name="gitlab" link="#" title="GitLab" >}}
+    {{< icon name="envelope-o" link="mailto:me@example.com" title="Email" >}}
+{{< /icons >}}
 ```
 
 ##### Supported options
@@ -159,7 +159,7 @@ An image inside the article.
 
 ##### Basic usage
 ```
-{{</* image position="right" src="images/img.jpg" */>}}
+{{< image position="right" src="images/img.jpg" >}}
 ```
 
 ##### Supported options
