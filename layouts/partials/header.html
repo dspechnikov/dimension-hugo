@@ -27,12 +27,14 @@
     <nav>
         <ul>
             {{ range (.Pages | lang.Merge .Sites.First.RegularPages) }}
-            <li><a
-                    {{ printf "href=\"%s\"" (or (.Params.menuLink) (printf "#%s" ( .File.TranslationBaseName ))) | safeHTMLAttr }}
-                >
-                {{- or .Params.menuTitle .Title -}}
-                </a>
-            </li>
+                {{ if .Params.showInMenu | default true }}
+                <li><a
+                        {{ printf "href=\"%s\"" (or (.Params.menuLink) (printf "#%s" ( .File.TranslationBaseName ))) | safeHTMLAttr }}
+                    >
+                    {{- or .Params.menuTitle .Title -}}
+                    </a>
+                </li>
+                {{ end }}
             {{ end }}
         </ul>
     </nav>

@@ -1,6 +1,7 @@
 +++
 title = "Documentation"
 menuTitle = "Docs"
+showInMenu = false
 weight = 2
 +++
 
@@ -86,9 +87,13 @@ See demo site [index page](https://gitlab.com/dspechnikov/dimension-hugo/blob/ma
 1. Set `title` front matter variable to set page title.
 1. Write page content using markdown syntax and theme [shortcodes](#shortcodes).
 
-##### Page ordering in the navigation bar
+##### Page ordering in the navigation menu
 
-By default, the pages are sorted by title in the navigation bar. To change the ordering, set `weight` front matter variable. The page with the highest `weight` will appear first.
+By default, the pages are sorted by title in the navigation menu. To change the ordering, set `weight` front matter variable. The page with the highest `weight` will appear first.
+
+##### Exclude page from navigation menu
+
+The page may be made visible only by direct link. Set `showInMenu` front matter variable to `false` to achieve that.
 
 ### Shortcodes
 

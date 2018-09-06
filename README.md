@@ -11,6 +11,7 @@
 
 - Shortcodes for the common elements so you don't have to write HTML
 - Optional logo image
+- Flexible navigation menu items
 - Easy style modifications with `config.toml` options
 - 404 page template
 - Custom CSS support
