@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://dspechnikov.gitlab.io/dimension-hugo"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Dimension for Hugo"
