@@ -36,3 +36,7 @@ theme = "dimension"
         [languages.ru.params]
             author = "Дмитрий Печников"
             description = "Тема для генератора сайтов Hugo. Создана на основе HTML шаблона Dimension от HTML5 UP."
+
+
+[permalinks]
+    "" = "/#:filename"

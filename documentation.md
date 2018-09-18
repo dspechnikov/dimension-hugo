@@ -199,4 +199,13 @@ Copyright message should include at least the year when the site was published
 for the first time. You can specify it in `copyrightPublishYear` option. Then 
 copyright years will be updated with each passing year to look like this: `<copyrightPublishYear>-<currentYear>`.   
 
+### Sitemap
+
+Hugo default permalink format does not work with this theme. 
+To get correct links in the sitemap, add the following section to the `config.toml`:
+```
+[permalinks]
+    "" = "/#:filename"
+``` 
+
 [demo site configuration]: ./exampleSite/config.toml
